@@ -7,6 +7,15 @@ class Counter extends Component {
         count: 10,
         tags : ['tag1', 'tag2', 'tag3']
     };
+    
+
+    handleIncrement = () =>{
+        this.setState({ count: this.state.count + 1})
+    }
+
+    handleDecrement = () =>{
+        this.setState({ count: this.state.count - 1})
+    }
 
     styles = {
         fontSize: 30,
@@ -26,8 +35,9 @@ class Counter extends Component {
 
         return (
                 <div>
+                    <button onClick={this.handleDecrement} className="btn btn-secondary btn-sm">Decrement</button> 
                     <span style= {this.styles } className={classes}>{this.formatCount()}</span>
-                    <button className="btn btn-secondary btn-sm">Increment</button> 
+                    <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button> 
                     {this.renderTags()}
                 </div>
 
