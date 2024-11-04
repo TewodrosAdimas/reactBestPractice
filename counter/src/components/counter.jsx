@@ -3,8 +3,12 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
     render() { 
-        return <h1>Hello React</h1>;
+        return (
+            <React.Fragment>
+                <h1>Hello React</h1>
+                <button>Increnment</button>
+                </React.Fragment>);
     }
 }
- 
+
 export default Counter;
