@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const Hello = (props) =>(
   <div>
-    <h1>Hello React {props.name}</h1>
+    <h1>Hello {props.name}</h1>
   </div>
 )
 
