@@ -4,12 +4,12 @@ import './styles.css';
 
 function Calculator() {
 
-  function handleNumber(){
-    alert('handle number click');
+  function handleNumber(value){
+    alert('handle number click ' + value);
   }
 
-  function handleOperator(){
-
+  function handleOperator(value){
+    alert('handle number click ' + value);
   }
 
   return (
@@ -41,7 +41,7 @@ function Calculator() {
 
 function CalcButton(props){
   return (
-    <button className= {props.className} onClick={props.onClick}> {props.value} </button>
+    <button className= {props.className} onClick={() => props.onClick(props.value)}> {props.value} </button>
   )
 }
 
