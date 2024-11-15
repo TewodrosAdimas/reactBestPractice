@@ -1,28 +1,36 @@
+---
+
 # React Calculator
 
-This project is a basic calculator application built with React. It allows users to perform arithmetic operations such as addition, subtraction, multiplication, and division.
+This project is an advanced calculator application built with React, allowing users to perform a variety of arithmetic operations, including exponentiation and percentage calculations. 
 
 ## Features
 
-- **Basic arithmetic operations**: Add, subtract, multiply, and divide numbers.
-- **Clear function**: Reset the calculator to its initial state.
-- **Chained calculations**: Supports chained operations (e.g., `2 + 3 * 4`).
-- **Responsive interface**: Layout designed to adapt to various screen sizes.
+- **Basic Arithmetic Operations**: Add, subtract, multiply, and divide numbers.
+- **Exponentiation**: Calculate powers (e.g., `2 ** 3`).
+- **Percentage Calculation**: Convert numbers to percentages with a dedicated `%` function.
+- **Clear and Backspace Functions**: Reset the calculator or remove the last digit entered.
+- **Decimal Precision**: Results rounded to 4 decimal places for improved readability.
+- **Responsive Interface**: Layout adapts smoothly to various screen sizes for a user-friendly experience.
 
 ## Project Structure
 
-- `Calculator` component: The main component handling the calculator's display and logic.
-- `CalcButton` component: A reusable button component used throughout the calculator for each number and operator.
+- **`Calculator` Component**: The main component handling display and all calculation logic.
+- **`CalcButton` Component**: A reusable button component for numbers, operators, and functions.
 
 ## Code Breakdown
 
-- **State**: Uses React's `useState` hook to manage the current number, total result, initial input state, and last operator.
-- **Functions**:
-  - `handleNumber(value)`: Appends numbers to the current input.
-  - `handleOperator(value)`: Triggers an operation (+, -, *, /) and calculates intermediate totals.
-  - `doCalculation()`: Executes the current calculation based on the last operator.
-  - `handleClear()`: Resets the calculator display and state.
-  - `handleEquals()`: Calculates the final result and displays it.
+- **State Management**: Uses React's `useState` to manage values such as the current input, total, operator status, and initial state.
+- **Core Functions**:
+  - `handleNumber(value)`: Adds a number to the current input.
+  - `handleOperator(value)`: Sets up an operation (e.g., +, -, *, /) and calculates intermediate totals.
+  - `handlePercentage()`: Converts the current value into a percentage.
+  - `handleExponential()`: Executes exponentiation based on a base and exponent.
+  - `handleDecimal()`: Adds a decimal point to the current input.
+  - `handleBackspace()`: Removes the last character in the current input.
+  - `handleClear()`: Resets the calculator's display and state.
+  - `handleEquals()`: Finalizes and displays the result of the current calculation.
+  - `doCalculation()`: Processes the calculation based on the selected operation and rounds the result to 4 decimal places.
 
 ## Installation and Usage
 
@@ -44,17 +52,18 @@ This project is a basic calculator application built with React. It allows users
    ```
 5. Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-## Example
+## Example Usage
 
-- Perform a calculation:
-  - Click `7`, then `+`, then `3`, then `=`.
-  - The display should show `10`.
+- To calculate `7 + 3 = 10`:
+  - Click `7`, `+`, `3`, then `=`.
+- For exponentiation, try `2 ** 3` to get `8`.
+- Convert `50` to a percentage by clicking `50` then `%`.
 
 ## Future Enhancements
 
-- **Additional operations**: Add support for operations such as percentage and square root.
-- **Keyboard input**: Enable keyboard support for more seamless user interaction.
-- **Memory functions**: Implement memory storage, recall, and clear functions.
+- **Keyboard Support**: Enable seamless input through keyboard interaction.
+- **Memory Functions**: Add memory recall, store, and clear functions to extend usability.
+- **Additional Operations**: Add scientific functions like square root and trigonometry for expanded calculations.
 
 ## License
 
@@ -62,4 +71,4 @@ This project is licensed under the MIT License.
 
 ## Acknowledgments
 
-This project was created to practice and learn React basics, particularly handling state and events in functional components.
+This project was created as part of a journey to deepen skills in React and JavaScript, focusing on state and event handling in functional components.
