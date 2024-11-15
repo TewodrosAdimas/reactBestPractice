@@ -39,7 +39,8 @@ function Calculator() {
   function doCalculation() {
     let total = parseInt(calc.total) || 0;
     const current = parseInt(calc.current) || 0;
-
+  debugger;
+    console.log(calc)
     switch (calc.preOp) {
       case "+":
         total += current;
@@ -101,10 +102,16 @@ function Calculator() {
       <CalcButton value="3" onClick={handleNumber} />
       <CalcButton className="operator" onClick={() => handleOperator("-")} value="-" />
 
-      <CalcButton value="C" onClick={handleClear} />
+      <CalcButton value="%" onClick={handleClear} />
       <CalcButton value="0" onClick={handleNumber} />
-      <CalcButton value="=" onClick={handleEquals} />
+      <CalcButton value="." onClick={handleEquals} />
       <CalcButton className="operator" onClick={() => handleOperator("+")} value="+" />
+
+      <CalcButton value="C" onClick={handleClear} />
+      <CalcButton value="=" onClick={handleNumber} />
+      <CalcButton value="<" onClick={handleEquals} />
+      <CalcButton className="operator" onClick={() => handleOperator("+")} value="**" />
+
     </div>
   );
 }
