@@ -34,7 +34,7 @@ function Calculator() {
   }
 
   function handlePercentage() {
-    const total = parseFloat(calc.current) / 100;
+    const total = (parseFloat(calc.current) / 100).toFixed(4);
 
     setCalc({
       current: total.toString(),
@@ -63,6 +63,7 @@ function Calculator() {
           total /= current;
         } else {
           alert("Cannot divide by zero");
+          return "0";
         }
         break;
       case "**":
@@ -71,7 +72,7 @@ function Calculator() {
       default:
         total = current;
     }
-    return total;
+    return parseFloat(total.toFixed(4)); // Round to 4 decimal places
   }
 
   function handleExponential(base, exponent) {
