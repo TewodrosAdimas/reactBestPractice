@@ -33,7 +33,7 @@ Each project is a standalone React component or set of components. To run any pr
    ```
 2. Navigate to the project folder:
    ```bash
-   cd reactBestPractice
+   cd reactBestPractice/{your interest of project}
    ```
 3. Install dependencies:
    ```bash
@@ -62,4 +62,3 @@ This repository is licensed under the MIT License.
 ---
 
 Happy coding!
-```
