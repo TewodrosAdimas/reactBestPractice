@@ -65,6 +65,11 @@ break;
 case "*":
 total *= current;
 break;
+
+case "**":
+total = handleExponenetial();
+break;
+
 case "/":
 if (current !== 0) {
 total /= current;
@@ -76,6 +81,11 @@ default:
 total = current;
 }
 return total;
+}
+
+
+function handleExponenetial(){
+  
 }
 
 function handleClear() {
